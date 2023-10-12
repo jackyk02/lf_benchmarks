@@ -1,0 +1,62 @@
+10000 steps
+
+Ray:
+m7i.8xlarge: 30.45 seconds (higher network bandwith)
+m5.8xlarge: 47.22 seconds 
+
+LF Unfederated:
+m7i.8xlarge: 41.04 seconds (clock speed is slower in m7i)
+m5.8xlarge: 34.33 seconds 
+
+
+m5.8xlarge:
+Architecture:                    x86_64
+CPU op-mode(s):                  32-bit, 64-bit
+Byte Order:                      Little Endian
+Address sizes:                   46 bits physical, 48 bits virtual
+CPU(s):                          32
+On-line CPU(s) list:             0-31
+Thread(s) per core:              2
+Core(s) per socket:              16
+Socket(s):                       1
+NUMA node(s):                    1
+Vendor ID:                       GenuineIntel
+CPU family:                      6
+Model:                           85
+Model name:                      Intel(R) Xeon(R) Platinum 8259CL CPU @ 2.50GHz
+Stepping:                        7
+CPU MHz:                         2499.998
+BogoMIPS:                        4999.99
+Hypervisor vendor:               KVM
+Virtualization type:             full
+L1d cache:                       512 KiB
+L1i cache:                       512 KiB
+L2 cache:                        16 MiB
+L3 cache:                        35.8 MiB
+NUMA node0 CPU(s):               0-31
+
+m7i.8xlarge:
+Architecture:                    x86_64
+CPU op-mode(s):                  32-bit, 64-bit
+Byte Order:                      Little Endian
+Address sizes:                   46 bits physical, 48 bits virtual
+CPU(s):                          32
+On-line CPU(s) list:             0-31
+Thread(s) per core:              2
+Core(s) per socket:              16
+Socket(s):                       1
+NUMA node(s):                    1
+Vendor ID:                       GenuineIntel
+CPU family:                      6
+Model:                           143
+Model name:                      Intel(R) Xeon(R) Platinum 8488C
+Stepping:                        8
+CPU MHz:                         2400.000
+BogoMIPS:                        4800.00
+Hypervisor vendor:               KVM
+Virtualization type:             full
+L1d cache:                       768 KiB
+L1i cache:                       512 KiB
+L2 cache:                        32 MiB
+L3 cache:                        105 MiB
+NUMA node0 CPU(s):               0-31

@@ -369,6 +369,22 @@ overhead_values = [float(line.split()[-2])
                    for line in data.splitlines() if "Overhead" in line]
 
 # Calculating average overhead
-average_overhead = sum(overhead_values) / len(overhead_values)
+mean_overhead = sum(overhead_values) / len(overhead_values)
 
-print(f"Average Overhead: {average_overhead:.4f} seconds")
+print(f"Average Overhead: {mean_overhead:.4f} seconds")
+
+import math
+
+# Mean of the overhead values
+mean_overhead = sum(overhead_values) / len(overhead_values)
+
+# Standard deviation calculation
+std_dev = math.sqrt(sum([(x - mean_overhead)**2 for x in overhead_values]) / (len(overhead_values) - 1))
+
+# 99% confidence interval
+Z_99 = 2.576
+margin_error = Z_99 * (std_dev / math.sqrt(len(overhead_values)))
+conf_interval = (mean_overhead - margin_error, mean_overhead + margin_error)
+
+print(f"Standard Deviation: {std_dev:.4f} seconds")
+print(f"99% Confidence Interval: ({conf_interval[0]:.4f}, {conf_interval[1]:.4f}) seconds")
