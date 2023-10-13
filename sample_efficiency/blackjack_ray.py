@@ -8,7 +8,7 @@ ray.init(configure_logging=False, log_to_driver=False)
 
 # Configuration parameters
 NUM_ENVS = 16
-NUM_STEPS = 10000
+NUM_STEPS = 5000
 
 
 @ray.remote
@@ -18,7 +18,7 @@ class RolloutWorker:
     """
 
     def __init__(self):
-        self.env = gym.make("CartPole-v1")
+        self.env = gym.make("Blackjack-v1")
         self.env.reset(seed=123, options={})
 
     def step(self, seed):

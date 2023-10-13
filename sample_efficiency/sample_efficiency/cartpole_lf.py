@@ -71,7 +71,7 @@ NUM_STEPS = 5000
 
 # Configuration parameters
 NUM_ENVS = 16
-NUM_STEPS = 10000
+NUM_STEPS = 5000
 # End of preamble.
 
 
