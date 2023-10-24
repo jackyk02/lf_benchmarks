@@ -7,8 +7,8 @@ import time
 ray.init(configure_logging=False, log_to_driver=False)
 
 # Configuration parameters
-NUM_ENVS = 16
-NUM_STEPS = 5000
+NUM_ENVS = 31
+NUM_STEPS = 1000000
 
 
 @ray.remote

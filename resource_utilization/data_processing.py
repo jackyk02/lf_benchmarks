@@ -3,81 +3,272 @@ import numpy as np
 import scipy.stats as stats
 
 data = """
-2023-10-13 03:40:23, CPU: 1.2%, Memory: 3.88%
-2023-10-13 03:40:24, CPU: 0.2%, Memory: 3.88%
-2023-10-13 03:40:26, CPU: 3.6%, Memory: 3.88%
-2023-10-13 03:40:27, CPU: 0.4%, Memory: 3.88%
-2023-10-13 03:40:28, CPU: 27.1%, Memory: 3.95%
-2023-10-13 03:40:29, CPU: 0.4%, Memory: 3.87%
-2023-10-13 03:40:30, CPU: 39.8%, Memory: 6.97%
-2023-10-13 03:40:31, CPU: 0.2%, Memory: 3.87%
-2023-10-13 03:40:33, CPU: 26.6%, Memory: 6.13%
-2023-10-13 03:40:34, CPU: 0.8%, Memory: 3.88%
-2023-10-13 03:40:35, CPU: 0.2%, Memory: 3.88%
-2023-10-13 03:40:36, CPU: 3.8%, Memory: 3.88%
-2023-10-13 03:40:37, CPU: 0.4%, Memory: 3.89%
-2023-10-13 03:40:38, CPU: 9%, Memory: 4.04%
-2023-10-13 03:40:40, CPU: 3.5%, Memory: 3.81%
-2023-10-13 03:40:41, CPU: 43%, Memory: 6.75%
-2023-10-13 03:40:42, CPU: 0.2%, Memory: 3.81%
-2023-10-13 03:40:43, CPU: 17%, Memory: 5.29%
-2023-10-13 03:40:44, CPU: 1.9%, Memory: 3.81%
-2023-10-13 03:40:46, CPU: 0.2%, Memory: 3.81%
-2023-10-13 03:40:47, CPU: 4.4%, Memory: 4.00%
-2023-10-13 03:40:48, CPU: 0.4%, Memory: 3.81%
-2023-10-13 03:40:49, CPU: 35.9%, Memory: 7.01%
-2023-10-13 03:40:50, CPU: 0%, Memory: 3.80%
-2023-10-13 03:40:51, CPU: 21.6%, Memory: 5.53%
-2023-10-13 03:40:53, CPU: 1%, Memory: 3.81%
-2023-10-13 03:40:54, CPU: 0.4%, Memory: 3.81%
-2023-10-13 03:40:55, CPU: 2.5%, Memory: 3.81%
-2023-10-13 03:40:56, CPU: 0.2%, Memory: 3.80%
-2023-10-13 03:40:57, CPU: 11.5%, Memory: 3.95%
-2023-10-13 03:40:58, CPU: 0.2%, Memory: 3.81%
-2023-10-13 03:41:00, CPU: 40.3%, Memory: 6.90%
-2023-10-13 03:41:01, CPU: 0.2%, Memory: 3.81%
-2023-10-13 03:41:02, CPU: 20.2%, Memory: 5.63%
-2023-10-13 03:41:03, CPU: 0.2%, Memory: 3.81%
-2023-10-13 03:41:04, CPU: 29%, Memory: 6.29%
-2023-10-13 03:41:05, CPU: 0.8%, Memory: 3.81%
-2023-10-13 03:41:07, CPU: 11.9%, Memory: 4.81%
-2023-10-13 03:41:08, CPU: 2.1%, Memory: 3.80%
-2023-10-13 03:41:09, CPU: 0.4%, Memory: 3.80%
-2023-10-13 03:41:10, CPU: 8.3%, Memory: 3.93%
-2023-10-13 03:41:11, CPU: 0.2%, Memory: 3.80%
-2023-10-13 03:41:13, CPU: 37.1%, Memory: 6.96%
-2023-10-13 03:41:14, CPU: 0%, Memory: 3.80%
-2023-10-13 03:41:15, CPU: 18.3%, Memory: 5.32%
-2023-10-13 03:41:16, CPU: 0.8%, Memory: 3.80%
-2023-10-13 03:41:17, CPU: 0.4%, Memory: 3.80%
-2023-10-13 03:41:18, CPU: 2.7%, Memory: 3.79%
-2023-10-13 03:41:20, CPU: 0.2%, Memory: 3.80%
-2023-10-13 03:41:21, CPU: 16.2%, Memory: 3.90%
-2023-10-13 03:41:22, CPU: 0.2%, Memory: 3.80%
-2023-10-13 03:41:23, CPU: 39.6%, Memory: 6.76%
-2023-10-13 03:41:24, CPU: 0.4%, Memory: 3.80%
-2023-10-13 03:41:25, CPU: 12.4%, Memory: 5.07%
-2023-10-13 03:41:27, CPU: 0.4%, Memory: 3.80%
-2023-10-13 03:41:28, CPU: 21.1%, Memory: 5.46%
+ CPU: 19.7%
+ CPU: 19.4%
+ CPU: 15.9%
+ CPU: 18.4%
+ CPU: 20.9%
+ CPU: 22.3%
+ CPU: 17.4%
+ CPU: 20.9%
+ CPU: 17.2%
+ CPU: 19.3%
+ CPU: 18.4%
+ CPU: 20%
+ CPU: 18.9%
+ CPU: 21.3%
+ CPU: 18.6%
+ CPU: 19.4%
+ CPU: 19.5%
+ CPU: 24.8%
+ CPU: 21.8%
+ CPU: 19.4%
+ CPU: 16.1%
+ CPU: 14.7%
+ CPU: 17.3%
+ CPU: 20.1%
+ CPU: 18.9%
+ CPU: 16.2%
+ CPU: 17.6%
+ CPU: 16.1%
+ CPU: 18%
+ CPU: 18.4%
+ CPU: 21.1%
+ CPU: 20.9%
+ CPU: 19.8%
+ CPU: 18.9%
+ CPU: 18.7%
+ CPU: 18.4%
+ CPU: 18.5%
+ CPU: 22.2%
+ CPU: 15.9%
+ CPU: 17.8%
+ CPU: 19.8%
+ CPU: 21.1%
+ CPU: 18.5%
+ CPU: 14.5%
+ CPU: 19.8%
+ CPU: 17.4%
+ CPU: 16.3%
+ CPU: 19.3%
+ CPU: 21.3%
+ CPU: 21.4%
+ CPU: 18.4%
+ CPU: 17%
+ CPU: 19.9%
+ CPU: 19.8%
+ CPU: 16%
+ CPU: 17.5%
+ CPU: 19.8%
+ CPU: 20.4%
+ CPU: 17.6%
+ CPU: 19.8%
+ CPU: 20.5%
+ CPU: 16.5%
+ CPU: 19.3%
+ CPU: 20.5%
+ CPU: 15.8%
+ CPU: 21.7%
+ CPU: 21.1%
+ CPU: 18.5%
+ CPU: 20.6%
+ CPU: 18.6%
+ CPU: 18.1%
+ CPU: 19.3%
+ CPU: 20.8%
+ CPU: 20.4%
+ CPU: 16.9%
+ CPU: 21.1%
+ CPU: 17.1%
+ CPU: 12%
+ CPU: 20.7%
+ CPU: 23.3%
+ CPU: 19.6%
+ CPU: 20%
+ CPU: 16.5%
+ CPU: 18.8%
+ CPU: 19.3%
+ CPU: 19.6%
+ CPU: 19.1%
+ CPU: 18.2%
+ CPU: 19.3%
+ CPU: 15.4%
+ CPU: 21.4%
+ CPU: 21.7%
+ CPU: 19.8%
+ CPU: 19.4%
+ CPU: 17.7%
+ CPU: 17.2%
+ CPU: 16%
+ CPU: 22.4%
+ CPU: 21.6%
+ CPU: 18.2%
+ CPU: 17%
+ CPU: 18%
+ CPU: 20.6%
+ CPU: 20.2%
+ CPU: 18.7%
+ CPU: 21.1%
+ CPU: 23.1%
+ CPU: 22.2%
+ CPU: 20.2%
+ CPU: 19.4%
+ CPU: 17.2%
+ CPU: 22.2%
+ CPU: 18.6%
+ CPU: 16.6%
+ CPU: 20.2%
+ CPU: 19.7%
+ CPU: 22.1%
+ CPU: 17.7%
+ CPU: 22.3%
+ CPU: 21.3%
+ CPU: 19%
+ CPU: 21.9%
+ CPU: 18.8%
+ CPU: 18.3%
+ CPU: 22.7%
+ CPU: 21%
+ CPU: 19.1%
+ CPU: 17.6%
+ CPU: 18.9%
+ CPU: 21.1%
+ CPU: 19.9%
+ CPU: 18.9%
+ CPU: 21.3%
+ CPU: 16.6%
+ CPU: 19%
+ CPU: 16.8%
+ CPU: 20%
+ CPU: 18.3%
+ CPU: 20%
+ CPU: 16.6%
+ CPU: 15.9%
+ CPU: 18.6%
+ CPU: 22.3%
+ CPU: 20.4%
+ CPU: 20%
+ CPU: 18.5%
+ CPU: 18.9%
+ CPU: 19%
+ CPU: 19%
+ CPU: 20.9%
+ CPU: 23.2%
+ CPU: 19.4%
+ CPU: 16.4%
+ CPU: 19.6%
+ CPU: 19%
+ CPU: 21.8%
+ CPU: 17.4%
+ CPU: 21.4%
+ CPU: 19.6%
+ CPU: 18.5%
+ CPU: 16.1%
+ CPU: 18.5%
+ CPU: 19.9%
+ CPU: 20.3%
+ CPU: 23%
+ CPU: 18.6%
+ CPU: 20.5%
+ CPU: 21.4%
+ CPU: 19%
+ CPU: 19.8%
+ CPU: 18.2%
+ CPU: 16.7%
+ CPU: 18.6%
+ CPU: 19.8%
+ CPU: 19.9%
+ CPU: 19.3%
+ CPU: 17.6%
+ CPU: 19.3%
+ CPU: 18.6%
+ CPU: 21.8%
+ CPU: 19.8%
+ CPU: 17%
+ CPU: 17.2%
+ CPU: 21.7%
+ CPU: 17.8%
+ CPU: 19.3%
+ CPU: 24.4%
+ CPU: 19.5%
+ CPU: 20.1%
+ CPU: 17.7%
+ CPU: 18.6%
+ CPU: 18.5%
+ CPU: 22.1%
+ CPU: 18.7%
+ CPU: 18.2%
+ CPU: 17.7%
+ CPU: 19.4%
+ CPU: 18.7%
+ CPU: 21%
+ CPU: 19.3%
+ CPU: 18.8%
+ CPU: 17.8%
+ CPU: 15.2%
+ CPU: 19.6%
+ CPU: 18.8%
+ CPU: 18.6%
+ CPU: 17.9%
+ CPU: 18.8%
+ CPU: 20.3%
+ CPU: 19.3%
+ CPU: 19.7%
+ CPU: 19.8%
+ CPU: 21.1%
+ CPU: 16.5%
+ CPU: 17.5%
+ CPU: 15.5%
+ CPU: 21.5%
+ CPU: 22.7%
+ CPU: 20.9%
+ CPU: 19.9%
+ CPU: 17.9%
+ CPU: 19.5%
+ CPU: 18.3%
+ CPU: 18%
+ CPU: 19.3%
+ CPU: 18.9%
+ CPU: 19.7%
+ CPU: 18.9%
+ CPU: 18.8%
+ CPU: 24%
+ CPU: 15.7%
+ CPU: 19%
+ CPU: 19.8%
+ CPU: 20%
+ CPU: 18.9%
+ CPU: 22.6%
+ CPU: 17.2%
+ CPU: 21%
+ CPU: 16.3%
+ CPU: 17.4%
+ CPU: 12.4%
+ CPU: 18.7%
+ CPU: 15.3%
+ CPU: 18.9%
+ CPU: 0.6%
+ CPU: 0.2%
+ CPU: 0%
 """
 
 # Extract CPU and Memory usage using regex
 cpu_usages = np.array([float(value) for value in re.findall(r'CPU: (\d+\.\d+)%', data)])
-memory_usages = np.array([float(value) for value in re.findall(r'Memory: (\d+\.\d+)%', data)])
+#memory_usages = np.array([float(value) for value in re.findall(r'Memory: (\d+\.\d+)%', data)])
 
 # Calculate the mean
 mean_cpu = np.mean(cpu_usages)
-mean_memory = np.mean(memory_usages)
+#mean_memory = np.mean(memory_usages)
 
 # Calculate the standard deviation
 std_cpu = np.std(cpu_usages)
-std_memory = np.std(memory_usages)
+#std_memory = np.std(memory_usages)
 
 # Calculate the 99% confidence interval
 conf_int_cpu = stats.norm.interval(0.99, loc=mean_cpu, scale=std_cpu / np.sqrt(len(cpu_usages)))
-conf_int_memory = stats.norm.interval(0.99, loc=mean_memory, scale=std_memory / np.sqrt(len(memory_usages)))
+#conf_int_memory = stats.norm.interval(0.99, loc=mean_memory, scale=std_memory / np.sqrt(len(memory_usages)))
 
 print(f"Mean CPU Usage: {mean_cpu:.2f}%")
-print(f"Mean Memory Usage: {mean_memory:.2f}%")
+#print(f"Mean Memory Usage: {mean_memory:.2f}%")
 print(f"99% Confidence Interval for CPU Usage: ({conf_int_cpu[0]:.2f}%, {conf_int_cpu[1]:.2f}%)")
-print(f"99% Confidence Interval for Memory Usage: ({conf_int_memory[0]:.2f}%, {conf_int_memory[1]:.2f}%)")
+#print(f"99% Confidence Interval for Memory Usage: ({conf_int_memory[0]:.2f}%, {conf_int_memory[1]:.2f}%)")

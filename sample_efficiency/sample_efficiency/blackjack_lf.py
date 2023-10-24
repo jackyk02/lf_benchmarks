@@ -167,9 +167,8 @@ class __serverreactor:
                 f"Env {i + 1}: Observations={temp[0]}, Reward={temp[1]}, Terminated={temp[2]}")
 
         print("\n")
-
-        self.step_num += 1
         seed.set(self.step_num)
+        self.step_num += 1
         return 0
 
 # Python class for reactor __lf_gendelay_0
